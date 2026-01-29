@@ -6,15 +6,52 @@ namespace TGTranslate.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly ILogger<HomeController> _logger;
+        private readonly IConfiguration _configuration;
+        private readonly HttpClient _httpClient;
+        private readonly List<string> mostUsedLanguages = new List<string>()
+        {
+            "English",
+            "Spanish",
+            "French",
+            "German",
+            "Chinese",
+            "Japanese",
+            "Russian",
+            "Portuguese",
+            "Italian",
+            "Arabic",
+            "Indonesian",
+            "Vietnamese",
+            "Korean",
+            "Turkish",
+            "Hindi"
+        };
+
+        public HomeController(ILogger<HomeController> logger, IConfiguration configuration, HttpClient httpClient)
+        {
+            _logger = logger;
+            _configuration = configuration;
+            _httpClient = httpClient;
+        }
+
         public IActionResult Index()
         {
             return View();
         }
 
-        public IActionResult Privacy()
+        [HttpPost]
+        public async Task<IActionResult> GetGPTResponse(string query, string selectedLanguage)
         {
-            return View();
+            var openAPIkey = _configuration["OpenAI:ApiKey"];
+
+            _httpClient.DefaultRequestHeaders.Add("Authorization", $"Bearer {openAPIkey}");
         }
+
+        //public IActionResult Privacy()
+        //{
+        //    return View();
+        //}
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
