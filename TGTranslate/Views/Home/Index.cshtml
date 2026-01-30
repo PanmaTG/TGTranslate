@@ -26,6 +26,15 @@
                     </svg>
                 </button>
             </form>
+
+            @if(ViewBag.Result != null)
+            {
+                <div class="mt-4">
+                    <p>Result:</p>
+                    <div class="alert alert-info">@Html.Raw(ViewBag.Result)</div>
+                </div>    
+            }
+
         </div>
     </div>
 </div>
