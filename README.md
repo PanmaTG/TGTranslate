@@ -39,7 +39,12 @@
   "AllowedHosts": "*"
 }
 ```
-5. Run the project by clicking the **Start** or **Start Debugging button** or by pressing **F5**
+5. Open Developer Terminal (View → Terminal)
+6. Install NuGet package "Newtonsoft.Json" by typing the following in Developer terminal
+```bash
+dotnet add package Newtonsoft.Json --version 13.0.4
+```   
+7. Run the project by clicking the **Start** or **Start Debugging button** or by pressing **F5**
 
 ## License
 Code released under the MIT License <br/>
