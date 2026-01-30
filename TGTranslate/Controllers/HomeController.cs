@@ -46,6 +46,8 @@ namespace TGTranslate.Controllers
             var openAPIkey = _configuration["OpenAI:ApiKey"];
 
             _httpClient.DefaultRequestHeaders.Add("Authorization", $"Bearer {openAPIkey}");
+
+            return Ok();
         }
 
         //public IActionResult Privacy()
