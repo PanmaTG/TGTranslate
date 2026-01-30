@@ -41,7 +41,7 @@ namespace TGTranslate.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> GetGPTResponse(string query, string selectedLanguage)
+        public async Task<IActionResult> OpenAIGPT(string query, string selectedLanguage)
         {
             var openAPIkey = _configuration["OpenAI:ApiKey"];
 
