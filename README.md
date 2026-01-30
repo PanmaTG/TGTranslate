@@ -7,24 +7,25 @@
   ![Static Badge](https://img.shields.io/badge/visual_studio-622ca3?style=for-the-badge)
 
 ## Setup (To Run Locally)
-1. Clone this repository
-    ```bash
-    git clone https://github.com/PanmaTG/TGTranslate.git
-    cd TGTranslate
-    ```
-2. Open the `TGTranslate.slnx` using Visual Studio.
-
-    ```bash
-    start TGTranslate.slnx
-    ```
-
+1. Install pre-requisite workload using **Visual Studio Installer**
 > [!IMPORTANT]  
 > Make sure **ASP.NET and web developmen**t is installed.
 > <br>
 > ![TGTranslate README Image](./readme-img/img2.png)
     
-3. Navigate to TGTranslate\appsettings.json
-4. Input your **OpenAI API key**
+2. Clone this repository
+    ```bash
+    git clone https://github.com/PanmaTG/TGTranslate.git
+    cd TGTranslate
+    ```
+3. Open the `TGTranslate.slnx` using Visual Studio.
+
+    ```bash
+    start TGTranslate.slnx
+    ```
+
+4. Navigate to TGTranslate\appsettings.json
+5. Input your **OpenAI API key**
 ```json
 {
   "Logging": {
@@ -39,8 +40,8 @@
   "AllowedHosts": "*"
 }
 ```
-5. Open Developer Terminal (View → Terminal)
-6. Install NuGet package "Newtonsoft.Json" by typing the following in Developer terminal
+6. Open Developer Terminal (View → Terminal)
+7. Install NuGet package "Newtonsoft.Json" by typing the following in Developer terminal
 ```bash
 dotnet add package Newtonsoft.Json --version 13.0.4
 ```   
