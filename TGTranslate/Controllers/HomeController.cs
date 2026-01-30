@@ -2,6 +2,9 @@ using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using TGTranslate.Models;
+using System.Text;
+using TGTranslate.DTO;
+using Newtonsoft.Json;
 
 namespace TGTranslate.Controllers
 {
@@ -46,10 +49,32 @@ namespace TGTranslate.Controllers
         public async Task<IActionResult> OpenAIGPT(string query, string selectedLanguage)
         {
             var openAPIkey = _configuration["OpenAI:ApiKey"];
-
             _httpClient.DefaultRequestHeaders.Add("Authorization", $"Bearer {openAPIkey}");
 
-            return Ok();
+            var payload = new
+            {
+                model = "gpt-5-nano",
+                messages = new object[]
+                {
+                    new { role = "system", content = $"Translate to {selectedLanguage}"},
+                    new { role = "user", content = query }
+                },
+                temperature = 0,
+                max_tokens = 256
+            };
+            string jsonPayload = JsonConvert.SerializeObject(payload);
+            HttpContent httpContent = new StringContent(jsonPayload, Encoding.UTF8, "application/json");
+
+            var responseMsg = await _httpClient.PostAsync("https://api.openai.com/v1/chat/completions", httpContent);
+
+            var responseMsgJson = await responseMsg.Content.ReadAsStringAsync();
+
+            var response = JsonConvert.DeserializeObject<OpenAIResponse>(responseMsgJson);
+
+            ViewBag.Result = response.choices[0].message.content;
+            ViewBag.Languages = new SelectList(mostUsedLanguages);
+
+            return View("Index");
         }
 
         //public IActionResult Privacy()
