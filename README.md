@@ -23,7 +23,7 @@
 > <br>
 > ![TGTranslate README Image](./readme-img/img2.png)
     
-3. Navigate to TGTranslate/appsettings.json
+3. Navigate to TGTranslate\appsettings.json
 4. Input your **OpenAI API key**
 ```json
 {
