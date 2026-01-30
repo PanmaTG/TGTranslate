@@ -1,7 +1,7 @@
 # TGTranslate
   ![TGTranslate README Image](./readme-img/img1.png)
 
-## Languages and Tools Used
+## Built with
   ![Static Badge](https://img.shields.io/badge/asp.net-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)
   ![Static Badge](https://img.shields.io/badge/OpenAI%20API-black?style=for-the-badge&logo=openaigym&logoColor=%230081A5)
   ![Static Badge](https://img.shields.io/badge/visual_studio-622ca3?style=for-the-badge)
