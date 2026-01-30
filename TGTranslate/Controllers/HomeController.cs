@@ -1,5 +1,6 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using TGTranslate.Models;
 
 namespace TGTranslate.Controllers
@@ -37,6 +38,7 @@ namespace TGTranslate.Controllers
 
         public IActionResult Index()
         {
+            ViewBag.Languages = new SelectList(mostUsedLanguages);
             return View();
         }
 
