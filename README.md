@@ -7,10 +7,9 @@
   ![Static Badge](https://img.shields.io/badge/visual_studio-622ca3?style=for-the-badge)
 
 ## Setup (To Run Locally)
-1. Install pre-requisite workload using **Visual Studio Installer**
-> [!IMPORTANT]  
-> Make sure **ASP.NET and web developmen**t is installed.
-> <br>
+
+> [!IMPORTANT]
+> 1. Install pre-requisite workload ASP.NET and web development using **Visual Studio Installer** <br/>  
 > ![TGTranslate README Image](./readme-img/img2.png)
     
 2. Clone this repository
@@ -23,6 +22,7 @@
     ```bash
     start TGTranslate.slnx
     ```
+<br/>
 
 4. Navigate to TGTranslate\appsettings.json
 5. Input your **OpenAI API key**
@@ -45,7 +45,7 @@
 ```bash
 dotnet add package Newtonsoft.Json --version 13.0.4
 ```   
-7. Run the project by clicking the **Start** or **Start Debugging button** or by pressing **F5**
+8. Run the project by clicking the **Start** or **Start Debugging button** or by pressing **F5**
 
 ## License
 Code released under the MIT License <br/>
