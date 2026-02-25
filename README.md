@@ -47,6 +47,3 @@ dotnet add package Newtonsoft.Json --version 13.0.4
 ```   
 8. Run the project by clicking the **Start** or **Start Debugging button** or by pressing **F5**
 
-## License
-Code released under the MIT License <br/>
-Copyright (c) 2026 **Built by @PanmaTG**
