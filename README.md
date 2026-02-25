@@ -4,7 +4,7 @@
 ## Built with
   ![Static Badge](https://img.shields.io/badge/asp.net-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)
   ![Static Badge](https://img.shields.io/badge/OpenAI%20API-black?style=for-the-badge&logo=openaigym&logoColor=%230081A5)
-  ![Static Badge](https://img.shields.io/badge/visual_studio-622ca3?style=for-the-badge)
+  [![Visual Studio](https://custom-icon-badges.demolab.com/badge/Visual%20Studio-5C2D91.svg?style=for-the-badge&logo=visualstudio&logoColor=white)](#)
 
 ## Setup (To Run Locally)
 
