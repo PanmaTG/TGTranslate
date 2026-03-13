@@ -1,5 +1,5 @@
 # TGTranslate
-  ![TGTranslate README Image](./readme-img/img1.png)
+  ![TGTranslate README Image](./readme-img/img3.png)
 
 ## Built with
   ![Static Badge](https://img.shields.io/badge/asp.net-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)
